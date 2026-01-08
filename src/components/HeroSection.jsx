@@ -1,8 +1,5 @@
 import ImgHome from '../Assets/Home.png';
-
-
-
-import React from 'react'
+import { Link } from 'react-router';
 
 function HeroSection() {
   return (
@@ -19,6 +16,9 @@ function HeroSection() {
         Explore our wide range of bicycles available for rent. Whether you're looking for a leisurely ride around the city or an adventurous trail experience, we have the perfect bike for you.
       </p>
 
+    <Link to="/explore" className="text-3xl block mx-auto bg-orange-400 text-white m-4 py-2 px-4 rounded-md cursor-pointer w-fit">
+      Explore Now 🛞
+    </Link>
       </div>
   )
 }

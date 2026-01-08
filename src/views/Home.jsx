@@ -1,7 +1,7 @@
-import FeaturesSection from '../components/featuresSection.jsx';
+import FeaturesSection from '../components/FeaturesSection.jsx';
 import HeroSection from '../components/HeroSection.jsx';
 import Navbar from '../components/Navbar.jsx';
-
+import ReviewsSection from '../components/ReviewsSection.jsx';
 
 
 function Home() {
@@ -12,6 +12,9 @@ function Home() {
     <HeroSection/>
 
     <FeaturesSection/>
+
+    <ReviewsSection/>
+
     </div>
   );
 }
