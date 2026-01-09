@@ -10,7 +10,7 @@ function ReviewCard({name, review, rating, avatar}) {
     <div>
       <h3 className="text-lg font-semibold mt-2">{name}</h3>
 
-    <RatingStars rating={rating} />
+    <RatingStars rating={rating}/>
 
       <p className="text-gray-600 mt-2">{review}</p>
     </div>
