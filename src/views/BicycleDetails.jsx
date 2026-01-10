@@ -66,4 +66,4 @@ function BicycleDetails() {
   );
 }
 
-export default BicycleDetails;
+export default BicycleDetails
