@@ -5,7 +5,7 @@ import Home from './views/Home.jsx';
 import AllBicycles from './views/AllBicycles.jsx';
 import Contact from './views/Contact.jsx';
 import BicycleDetails from './views/BicycleDetails.jsx';
-import BookingPage from './views/BookingPage.jsx';
+
 
 
 
@@ -18,7 +18,6 @@ rootElement.render(
             <Route path="/" element={<Home/>}/>
             <Route path="/explore" element={<AllBicycles/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/book-now" element={<BookingPage/>}/>
             <Route path="/Bicycle-details" element={<BicycleDetails/>}/>
         </Routes>
     </BrowserRouter>

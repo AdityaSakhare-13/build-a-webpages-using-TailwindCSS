@@ -58,6 +58,30 @@ function BicycleDetails() {
 
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleBooking = () => {
+    setShowSuccess(true);
+    setTimeout(() => {
+      setShowSuccess(false);
+      setBookingDetails({
+        bicycleId: searchParams.get("id"),
+        bookingDate: "",
+        bookingTime: "",
+        bookingDuration: "",
+        userName: "",
+        userEmail: "",
+        userPhone: "",
+        userAddress: "",
+        userIdType: "",
+        userIdNumber: "",
+        couponCode: "",
+        couponDiscount: 0,
+        couponDescription: "",
+        totalAmount: 0,
+      });
+    }, 1000);
+  };
 
   return (
     <div>
@@ -260,7 +284,13 @@ function BicycleDetails() {
         className=""
         />
 
-        <button className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 mx-auto block mt-6">
+        {showSuccess && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+            🎉 Booking Successful! Your bicycle has been reserved.
+          </div>
+        )}
+
+        <button onClick={handleBooking} className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 mx-auto block mt-6">
           Book Now
         </button>
 
