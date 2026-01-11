@@ -59,8 +59,17 @@ function BicycleDetails() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleBooking = () => {
+    if (!bookingDetails.bookingDate || !bookingDetails.bookingTime || !bookingDetails.bookingDuration || !bookingDetails.userName || !bookingDetails.userEmail || !bookingDetails.userPhone || !bookingDetails.userAddress || !bookingDetails.userIdType || !bookingDetails.userIdNumber) {
+      setShowError(true);
+      setTimeout(() => {
+        setShowError(false);
+      }, 3000);
+      return;
+    }
+    setShowError(false);
     setShowSuccess(true);
     setTimeout(() => {
       setShowSuccess(false);
@@ -283,6 +292,12 @@ function BicycleDetails() {
         }}
         className=""
         />
+
+        {showError && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            ⚠️ Please fill in all required fields before booking.
+          </div>
+        )}
 
         {showSuccess && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">

@@ -12,8 +12,17 @@ function Contact() {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleSubmit = () => {
+    if (!contactDetails.name || !contactDetails.email || !contactDetails.phone || !contactDetails.message) {
+      setShowError(true);
+      setTimeout(() => {
+        setShowError(false);
+      }, 3000);
+      return;
+    }
+    setShowError(false);
     setShowSuccess(true);
     setTimeout(() => {
       setShowSuccess(false);
@@ -85,6 +94,12 @@ function Contact() {
           }}
           className="w-full p-3 border border-gray-300 rounded-lg mb-4 h-32 resize-none"
         />
+
+        {showError && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            ⚠️ Please fill in all fields before sending the message.
+          </div>
+        )}
 
         {showSuccess && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
