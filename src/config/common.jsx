@@ -88,4 +88,28 @@ const RVIEWS_CONFIG = [
 
 ]
 
-export {FEATURES_CONFIG, RVIEWS_CONFIG };
+const  COUPON_CODES ={
+
+  "SAVE10": {
+    discount:10,
+    description:"Get off on your first rental."
+  },
+
+  "FREERIDE":{
+    discount:100,
+    description:"Enjoy a free ride for the first hour."
+  },
+
+  "WEEKEND20":{
+    discount:20,
+    description:"20% off on weekend rentals."
+  },
+
+  "FAMILY50":{
+    discount:50,
+    description: "50% off for family rentals (3 or more bikes)."
+  }
+
+}
+
+export {COUPON_CODES,FEATURES_CONFIG, RVIEWS_CONFIG };
