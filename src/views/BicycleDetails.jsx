@@ -132,12 +132,12 @@ function BicycleDetails() {
         alt={bicycle.name} className="w-full h-[250px] md:w-[600px] md:h-[350px] object-cover mb-4 rounded-lg"/>
       </div>
      </div>
-     <p className="text-center text-xl">
+     <p className="text-center text-base sm:text-lg md:text-xl px-3 sm:px-4 md:px-0">
       {bicycle.description}
      </p>
 
-        <div className="w-[700px] bg-white mx-auto px-10 py-8 mt-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl text-orange-500">Booking Form</h2>
+        <div className="w-full sm:w-[95%] md:w-[700px] bg-white mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-8 mt-6 sm:mt-8 md:mt-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl text-orange-500">Booking Form</h2>
 
         <Input
         type="date"
@@ -178,7 +178,7 @@ function BicycleDetails() {
         className=""
         />
 
-        <div className="text-xl mt-4 px-4">
+        <div className="text-base sm:text-lg md:text-xl mt-4 px-2 sm:px-4 md:px-4">
           <p>
           Total Amount: ₹{" "}
           {bookingDetails.totalAmount + bookingDetails.couponDiscount}
@@ -186,7 +186,7 @@ function BicycleDetails() {
 
         {bookingDetails.couponDiscount > 0 ? (
         
-        <p className="text-orange-400 text-sm italic">
+        <p className="text-orange-400 text-xs sm:text-sm md:text-sm italic">
         Coupon Applied 🎉 : {bookingDetails.couponCode} - {" "}
       {bookingDetails.couponDescription}. You Saved ₹
       {bookingDetails.couponDiscount}!
@@ -213,7 +213,7 @@ function BicycleDetails() {
         className=""
         />
 
-        <p className="text-orange-500 pl-4">('Can You Have these Coupons : SAVE10 , FREERIDE , WEEKEND20 & FAMILY50') </p>
+        <p className="text-orange-500 pl-2 sm:pl-4 md:pl-4 text-xs sm:text-sm md:text-sm">('Can You Have these Coupons : SAVE10 , FREERIDE , WEEKEND20 & FAMILY50') </p>
 
         <Input
         type="text"
@@ -294,18 +294,18 @@ function BicycleDetails() {
         />
 
         {showError && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-100 border border-red-400 text-red-700 px-3 sm:px-4 md:px-4 py-2 sm:py-3 md:py-3 rounded mb-4 text-xs sm:text-sm md:text-base">
             ⚠️ Please fill in all required fields before booking.
           </div>
         )}
 
         {showSuccess && (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+          <div className="bg-green-100 border border-green-400 text-green-700 px-3 sm:px-4 md:px-4 py-2 sm:py-3 md:py-3 rounded mb-4 text-xs sm:text-sm md:text-base">
             🎉 Booking Successful! Your bicycle has been reserved.
           </div>
         )}
 
-        <button onClick={handleBooking} className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 mx-auto block mt-6">
+        <button onClick={handleBooking} className="bg-orange-500 text-white px-4 sm:px-6 md:px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 mx-auto block mt-6 text-xs sm:text-sm md:text-base">
           Book Now
         </button>
 
