@@ -1,4 +1,4 @@
-import FeaturesCard from "./FeaturesCard.jsx";
+import FeaturesCard from "./featuresCard.jsx";
 import { FEATURES_CONFIG } from "../config/common.jsx";
 import Heading from "./Heading.jsx";
 
